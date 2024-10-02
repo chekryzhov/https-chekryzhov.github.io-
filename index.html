@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body class="d-flex flex-column">
+    <header id="header" class="header__container">
+        <div class="header__content">
+            <div class="container">
+                <div class="logo__wrapper">
+                    <a href="/" class="logo_block">
+                        <div class="logo">
+                            <img src="img/header/logo.svg" alt="" class="logo">
+                        </div>
+                    </a>
+                    <div class="name__app">Сбор и анализ данных по осведомленности о роли вируса папилломы человека в развитии злокачественных новообразований и необходимости проведения вакцинации среди разных групп населения</p> </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="flex-shrink-0" role="main">
+        <div class="container">
+            <div class="title">Вирус папилломы человека</div>
+
+            <div class="info">
+                <div class="subtitle">Уважаемый Респондент!</div>
+                <div class="text">
+                    Настоящий опрос посвящен изучению осведомленности населения в отношении вируса папилломы человека (ВПЧ) и профилактической вакцинации.
+                    <p>Анкета полностью анонимна, поэтому просим отвечать на вопросы максимально открыто.</p>
+                    <p><b>Как отвечать:</b> выберите наиболее подходящий/подходящие с Вашей точки зрения ответ/ответы.</p>
+                </div>
+            </div>
+
+            <div class="personal_data">
+                <input type="checkbox" id="pd" name="pd" value="y">
+                <label for="pd">Согласен с политикой обработки </label><span class="pd_modal"> персональных данных</span>
+            </div>
+            
+            <div class="id_date_info">
+                <div class="date_card">
+                    <div class="date__item">
+                        <span class="date__title">Дата заполнения анкеты: </span><span id="today" class="date_value">02.10.2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text">
+                <span class="necessarily">*</span> - обязательные поля для заполнения
+            </div>
+            
+            <div class="form__block">
+                <div class="form__item">
+                    <div class="form__item__label">Кол-во полных лет<span class="necessarily">*</span></div>
+                    <div class="form__item__enter">
+                        <input id="age" class="form__input" type="text" placeholder="Введите возраст">
+                    </div>
+                </div>
+            
+                <div class="form__item">
+                    <div class="form__item__label">Пол пациента<span class="necessarily">*</span></div>
+                    <div class="form__item__enter">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="male" name="sex" value="М">
+                            <label for="male">Мужчина</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="female" name="sex" value="Ж">
+                            <label for="female">Женщина</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Место проживания<span class="necessarily">*</span></div>
+                    <div class="form__item__enter">
+                        <input id="country" class="form__input" type="text" placeholder="Введите страну" value="">
+                        <input id="region" class="form__input" type="text" placeholder="Введите регион" value="">
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Занятость<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="employment_ans_1" name="employment" value="1">
+                                <label for="employment_ans_1">учащийся (указать место учебы)</label>
+                            </div>
+                            <input id="school" class="form__input form__input_checkbox" type="text" placeholder="Введите место учебы" value="">
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="employment_ans_2" name="employment" value="2">
+                                <label for="employment_ans_2">студент (указать место учебы)</label>
+                            </div>
+                            <input id="vuz" class="form__input form__input_checkbox" type="text" placeholder="Введите место учебы" value="">
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="employment_ans_3" name="employment" value="3">
+                                <label for="employment_ans_3">работающий (указать место работы)</label>
+                            </div>
+                            <input id="work" class="form__input form__input_checkbox" type="text" placeholder="Введите место работы" value="">
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="employment_ans_4" name="employment" value="4">
+                                <label for="employment_ans_4">домохозяйка</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="employment_ans_5" name="employment" value="5">
+                                <label for="employment_ans_5">пенсионер</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item q_5 dn">
+                    <div class="form__item__label">Образование<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="education_ans_1" name="education" value="1">
+                                <label for="education_ans_1">среднее</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="education_ans_2" name="education" value="2">
+                                <label for="education_ans_2">среднее профессиональное</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="education_ans_3" name="education" value="3">
+                                <label for="education_ans_3">незаконченное среднее профессиональное</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="education_ans_4" name="education" value="4">
+                                <label for="education_ans_4">незаконченное высшее</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="education_ans_5" name="education" value="5">
+                                <label for="education_ans_5">высшее</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="education_ans_6" name="education" value="6">
+                                <label for="education_ans_6">высшее, наличие ученой степени</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Сфера деятельности<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_1" name="activity" value="1">
+                                <label for="activity_ans_1">ветеринария</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_2" name="activity" value="2">
+                                <label for="activity_ans_2">информационные технологии (IT)</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_3" name="activity" value="3">
+                                <label for="activity_ans_3">логистика, транспорт</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_4" name="activity" value="4">
+                                <label for="activity_ans_4">маркетинг и реклама</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_5" name="activity" value="5">
+                                <label for="activity_ans_5">медицина и здравоохранение</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_6" name="activity" value="6">
+                                <label for="activity_ans_6">образование</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_7" name="activity" value="7">
+                                <label for="activity_ans_7">общественное питание</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_8" name="activity" value="8">
+                                <label for="activity_ans_8">производство</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_9" name="activity" value="9">
+                                <label for="activity_ans_9">строительство</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_10" name="activity" value="10">
+                                <label for="activity_ans_10">творческие профессии</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_11" name="activity" value="11">
+                                <label for="activity_ans_11">торговля, обслуживание</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_12" name="activity" value="12">
+                                <label for="activity_ans_12">туризм, гостеприимство, гостиничный бизнес</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_13" name="activity" value="13">
+                                <label for="activity_ans_13">финансы, бухгалтерия, банковское дело</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_14" name="activity" value="14">
+                                <label for="activity_ans_14">энергетика</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="radio" id="activity_ans_15" name="activity" value="15">
+                                <label for="activity_ans_15">юриспруденция</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper">
+                                <input type="radio" id="activity_ans_16" name="activity" value="16">
+                                <label for="activity_ans_16">другое, свой ответ</label>
+                            </div>
+                            <input id="other_activity" class="form__input form__input_checkbox" type="text" placeholder="Введите свой вариант" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Знаете ли Вы, что такое вирус папилломы человека (ВПЧ)?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter ">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vpch_yes" name="vpch" value="y">
+                            <label for="vpch_yes">Да</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vpch_no" name="vpch" value="n">
+                            <label for="vpch_no">Нет</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Какие заболевания может вызвать ВПЧ?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="diseases_ans_1" name="diseases" value="1">
+                                <label for="diseases_ans_1">рак шейки матки</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="diseases_ans_2" name="diseases" value="2">
+                                <label for="diseases_ans_2">воспаление почек</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="diseases_ans_3" name="diseases" value="3">
+                                <label for="diseases_ans_3">менингит</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="diseases_ans_4" name="diseases" value="4">
+                                <label for="diseases_ans_4">рак желудка</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="diseases_ans_5" name="diseases" value="5">
+                                <label for="diseases_ans_5">рак головы и шеи</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="diseases_ans_6" name="diseases" value="6">
+                                <label for="diseases_ans_6">рак заднего прохода (ануса) и анального канала</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="diseases_ans_7" name="diseases" value="7">
+                                <label for="diseases_ans_7">аногенитальные (венерические) бородавки</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Каким путем можно заразиться ВПЧ?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="infection_ans_1" name="infection" value="1">
+                                <label for="infection_ans_1">половым путем при контакте слизистых</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="infection_ans_2" name="infection" value="2">
+                                <label for="infection_ans_2">воздушно-капельным путем (при кашле, чихании)</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="infection_ans_3" name="infection" value="3">
+                                <label for="infection_ans_3">контактным путем (рукопожатия, объятия, через предметы обстановки)</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="infection_ans_4" name="infection" value="4">
+                                <label for="infection_ans_4">фекально-оральным путем (через пищу, воду, с грязными руками)</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="infection_ans_5" name="infection" value="5">
+                                <label for="infection_ans_5">трансмиссивным (заражение через насекомых)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">ВПЧ поражает:<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vpch_m_w_ans_1" name="vpch_m_w" value="1">
+                            <label for="vpch_m_w_ans_1">только женщин</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vpch_m_w_ans_2" name="vpch_m_w" value="2">
+                            <label for="vpch_m_w_ans_2">только мужчин</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vpch_m_w_ans_3" name="vpch_m_w" value="3">
+                            <label for="vpch_m_w_ans_3">и мужчин, и женщин </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Есть ли у Вас риск заражения ВПЧ?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vpch_risk_ans_1" name="vpch_risk" value="1">
+                            <label for="vpch_risk_ans_1">Да</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vpch_risk_ans_2" name="vpch_risk" value="2">
+                            <label for="vpch_risk_ans_2">Нет</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vpch_risk_ans_3" name="vpch_risk" value="3">
+                            <label for="vpch_risk_ans_3">Затрудняюсь ответить</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Слышали ли Вы о вакцинации против ВПЧ?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="known_vpch_ans_1" name="known_vpch" value="1">
+                            <label for="known_vpch_ans_1">Да</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="known_vpch_ans_2" name="known_vpch" value="2">
+                            <label for="known_vpch_ans_2">Нет</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item q_13 dn">
+                    <div class="form__item__label">Выберите, пожалуйста, все верные утверждения в отношении вакцины против ВПЧ<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="true_statements_ans_1" name="true_statements" value="1">
+                                <label for="true_statements_ans_1">Вакцинация рекомендуется мальчикам и девочкам</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="true_statements_ans_2" name="true_statements" value="2">
+                                <label for="true_statements_ans_2">Вакцинация рекомендуется только девочкам</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="true_statements_ans_3" name="true_statements" value="3">
+                                <label for="true_statements_ans_3">Вакцинация рекомендуется только мальчикам</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="true_statements_ans_4" name="true_statements" value="4">
+                                <label for="true_statements_ans_4">Вакцинация рекомендуется только женщинам</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="true_statements_ans_5" name="true_statements" value="5">
+                                <label for="true_statements_ans_5">Вакцинация рекомендуется только мужчинам</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="true_statements_ans_6" name="true_statements" value="6">
+                                <label for="true_statements_ans_6">Вакцинация рекомендуется всем вышеперечисленным</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Что Вы думаете о необходимости вакцинации против ВПЧ?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="need_vaccination_ans_1" name="need_vaccination" value="1">
+                            <label for="need_vaccination_ans_1">Я считаю, что вакцинация против ВПЧ не нужна</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="need_vaccination_ans_2" name="need_vaccination" value="2">
+                            <label for="need_vaccination_ans_2">Я считаю, что вакцинация против ВПЧ нужна отдельным группам населения</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="need_vaccination_ans_3" name="need_vaccination" value="3">
+                            <label for="need_vaccination_ans_3">Я считаю, что вакцинация против ВПЧ обязательна для всех</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Как Вы считаете, безопасна ли вакцина против ВПЧ?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="safe_vaccination_ans_1" name="safe_vaccination" value="1">
+                            <label for="safe_vaccination_ans_1">Да</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="safe_vaccination_ans_2" name="safe_vaccination" value="2">
+                            <label for="safe_vaccination_ans_2">Нет</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="safe_vaccination_ans_3" name="safe_vaccination" value="3">
+                            <label for="safe_vaccination_ans_3">Затрудняюсь ответить</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Как Вы считаете, эффективна ли вакцина против ВПЧ?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="effective_vaccination_ans_1" name="effective_vaccination" value="1">
+                            <label for="effective_vaccination_ans_1">Да</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="effective_vaccination_ans_2" name="effective_vaccination" value="2">
+                            <label for="effective_vaccination_ans_2">Нет</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="effective_vaccination_ans_3" name="effective_vaccination" value="3">
+                            <label for="effective_vaccination_ans_3">Затрудняюсь ответить</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Каким источникам информации Вы доверяете в вопросе вакцинопрофилактики больше всего?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="sources_ans_1" name="sources" value="1">
+                                <label for="sources_ans_1">литературные источники на медицинских порталах</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="sources_ans_2" name="sources" value="2">
+                                <label for="sources_ans_2">отзывы на открытых площадках</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="sources_ans_3" name="sources" value="3">
+                                <label for="sources_ans_3">мнение окружающих и отзывы знакомых</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="sources_ans_4" name="sources" value="4">
+                                <label for="sources_ans_4">телевидение и радио</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="sources_ans_5" name="sources" value="5">
+                                <label for="sources_ans_5">тематические ресурсы в сети «интернет»</label>
+                            </div>
+                        </div>
+                        <div class="form__item_wrap">
+                            <div class="checkbox__wrapper checkbox__wrapper_w100">
+                                <input type="checkbox" id="sources_ans_6" name="sources" value="6">
+                                <label for="sources_ans_6">врачу/медицинскому сотруднику</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Вы проходили вакцинацию против ВПЧ?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vaccination_ans_1" name="vaccination" value="1">
+                            <label for="vaccination_ans_1">Да</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vaccination_ans_2" name="vaccination" value="2">
+                            <label for="vaccination_ans_2">Нет, и не собираюсь</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vaccination_ans_3" name="vaccination" value="3">
+                            <label for="vaccination_ans_3">Нет, но планирую</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="vaccination_ans_4" name="vaccination" value="4">
+                            <label for="vaccination_ans_4">Затрудняюсь ответить</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item__label">Как Вы считаете, стоит ли включать вакцинацию против ВПЧ в Национальный календарь профилактических прививок, чтобы вакцинироваться бесплатно?<span class="necessarily">*</span></div>
+                    <div class="form__item__enter form__item__enter_checkbox">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="calendar_vaccination_ans_1" name="calendar_vaccination" value="1">
+                            <label for="calendar_vaccination_ans_1">Да</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="calendar_vaccination_ans_2" name="calendar_vaccination" value="2">
+                            <label for="calendar_vaccination_ans_2">Нет</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="calendar_vaccination_ans_3" name="calendar_vaccination" value="3">
+                            <label for="calendar_vaccination_ans_3">Затрудняюсь ответить</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn_result" onclick="questionnaireSubmit()">Отправить</button>
+
+            <!-- Modal -->
+            <div class="modal modal_result modal__container" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="title" id="exampleModalLongTitle">Информированное добровольное согласие участника исследования</div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div id="modal__body" class="modal-body modal__body">
+                            <div class="text">
+                                Исследовательская группа ФБУН ЦНИИ Эпидемиологии Роспотребнадзора приглашает Вас принять участие в социологическом исследовании, целью которого является изучение уровня информированности населения Российской Федерации о роли вируса папилломы человека в развитии злокачественных новообразований и необходимости проведения вакцинации.
+                                <p>Прежде чем Вы примете решение об участии в этом исследовании, мы бы хотели предоставить Вам информацию об этом исследовании, о том, что ожидает Вас, и о возможных рисках.</p>
+                                <p><b>Добровольность участия</b></p>
+                                <p>Ваше участие в исследовании должно быть исключительно добровольным. Данное согласие не должно даваться под влиянием обмана, психического или физического насилия, или в условиях несвободы. Ваше согласие не должно быть вынуждено стечением тяжелых жизненных обстоятельств (недостатком материальных средств) и/или не обусловлено какой-либо зависимостью от экспериментатора (-ов). Вы можете принять решение не участвовать в исследовании сейчас или отказаться продолжать участвовать на любом этапе без каких-либо негативных последствий.</p>
+                                <p><b>Конфиденциальность</b></p>
+                                <p>В данном исследовании мы не собираем никакие персональные данные участников. Все результаты будут представляться только в общем массиве, а не индивидуально. Все данные, собранные в ходе исследования, будут доступны только исследовательской группе. По результатам исследования мы планируем опубликовать результаты в научных журналах.</p>
+                                <p><b>Риски</b></p>
+                                <p>Данное исследование не предполагает возникновения рисков.</p>
+                                <p><b>Выгоды</b></p>
+                                <p>Своим участием Вы сможете внести вклад в научное исследование, предоставив сведения о информированности о вирусе папилломы человека, папилломавирусной инфекции, профилактической вакцинации. В целом эти данные позволят совершенствовать оказываемую медико-профилактическую помощь.</p>
+                                <p><b>Этическое одобрение</b></p>
+                                <p>Данное исследование рассмотрено и одобрено Локальным Этическим Комитетом ФБУН ЦНИИ Эпидемиологии Роспотребнадзора (выписка из протокола №140 заседания ЛЭК 27.02.2024 г.).</p>
+                                <p><b>ПОДТВЕРЖДЕНИЕ ИНФОРМИРОВАННОГО СОГЛАСИЯ НА УЧАСТИЕ В ИССЛЕДОВАНИИ</b></p>
+                                <p>Продолжая заполнение онлайн-опроса, я подтверждаю, что прочитал(а) и понял(а) цели, процедуру, методы и возможные неудобства участия в исследовании. Данное согласие дается не под влиянием обмана, психического или физического насилия, или в условиях несвободы. Мое согласие не вынуждено стечением тяжелых жизненных обстоятельств (недостатком материальных средств) и/или не обусловлено какой-либо зависимостью от экспериментатора (-ов). Я даю свое согласие на участие в исследовании.</p>
+                            </div>
+                        </div>
+                        <div class="modal__footer">
+                            <button type="button" class="btn btn_close modal__btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Закрыть</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer__container">
+        <div class="container">
+            <p class="">Сбор и анализ данных по осведомленности о роли вируса папилломы человека в развитии злокачественных новообразований и необходимости проведения вакцинации среди разных групп населения
+            </p>
+            <p class="">&copy ФБУН Центральный НИИ Эпидемиологии Роспотребнадзора</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
